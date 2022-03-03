@@ -8,13 +8,13 @@ export type CommentDocument = Comment & Document;
 @Schema()
 export class Comment {
   @Prop()
-  name: string;
+  username: string;
 
   @Prop()
-  artist: string;
+  test: string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Track' })
-  track: Track;
+  trackId: Track;
 }
 
 export const CommentSchema = SchemaFactory.createForClass(Comment);
