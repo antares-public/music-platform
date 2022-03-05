@@ -40,6 +40,7 @@ export class TrackService {
     id: mongoose.Schema.Types.ObjectId,
   ): Promise<mongoose.Schema.Types.ObjectId> {
     const track = await this.trackModel.findByIdAndDelete(id);
+    console.log(id);
     return track._id;
   }
 
